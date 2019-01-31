@@ -11,18 +11,52 @@ public class Hospital {
 		this.setNoOfTeams(noOfTeams);
 		this.setNoOfWards(noOfWards);
 	}
-<<<<<<< HEAD
-	public List<Patient> sortToWard(Patient newPatient, List<Patient> patients, List<Ward> wardList)
+
+	public List<Ward> sortToWard(Patient newPatient, List<Ward> wardList)
 	{
 		
 		
 		
-		patients.add(newPatient); 
-//		return wardList;
+		wardList = wardPlacement(wardSelection(wardList), newPatient, wardList );
+		
+		return wardList;
 		
 		
-		return patients;
-=======
+		
+	}  
+	public List<Ward> wardPlacement(int reference, Patient newPatient, List<Ward> wardList) { 
+		List<Patient> tempPatient = new ArrayList<Patient>();
+		tempPatient= wardList.get(reference).getPatients();
+		tempPatient.add(newPatient);
+		
+		(wardList.get(reference)).setPatients(tempPatient);
+		
+		return wardList;
+	}
+	public int wardSelection(List<Ward> wardList) {  
+		List<Integer> sizes = new ArrayList<Integer>();
+		for(int i = 0 ; i < 14 ; i++) { 
+
+			Ward dummyWard =(wardList.get(i)); 
+			sizes.add(dummyWard.getPatients().size()); 
+			
+		}   
+		int min = 21; 
+		int reference = 0;
+		for (int j = 0 ; j < 14 ; j++) { 
+			
+			 
+			if (sizes.get(j)<min) { 
+				min = sizes.get(j); 
+				reference = j;
+			} 
+			else { 
+				
+			}
+		}
+		return reference;
+		
+	}
 	
 	public static List<Ward> createHospital(){
 		List<Ward> wardList = new ArrayList<Ward>();
@@ -32,7 +66,7 @@ public class Hospital {
 			wardList.add(new Ward(i, patients));
 		}
 		return wardList;
->>>>>>> efd29e855b45d58d1be9fedb0e2c489a662309a0
+
 	}
 
 	public int getNoOfTeams() {
