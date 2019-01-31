@@ -10,10 +10,16 @@ public class Hospital {
 		this.setNoOfTeams(noOfTeams);
 		this.setNoOfWards(noOfWards);
 	}
-	public List<Patient> sortToWard(Patient newPatient)
+	public List<Patient> sortToWard(Patient newPatient, List<Patient> patients, List<Ward> wardList)
 	{
-		List<Patient> ward= new ArrayList<Patient>();
-		return ward;
+		
+		
+		
+		patients.add(newPatient); 
+//		return wardList;
+		
+		
+		return patients;
 	}
 	public int getNoOfTeams() {
 		return noOfTeams;
