@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
+import com.qa.quickstart.Hospital.Team;
 import com.qa.quickstart.Hospital.Ward; 
 //import com.qa.quickstart.Hospital.Team;
 
@@ -20,9 +21,13 @@ public class Admin extends Employee {
 	public static Patient admitPatient() {
 		Patient patient = new Patient("", "", "", "");
 		Scanner apScanner = new Scanner(System.in);
+		System.out.println("Patient BloodType: ");
 		String bloodTypeString = apScanner.nextLine();
+		System.out.println("Patient Date Of Birth: ");
 		String DOBString = apScanner.nextLine();
+		System.out.println("Patient Name: ");
 		String nameString = apScanner.nextLine();
+		System.out.println("Patient NIN: ");
 		String NINString = apScanner.nextLine();
 		patient.setBloodType(bloodTypeString);
 		patient.setDOB(DOBString);
@@ -65,8 +70,9 @@ public class Admin extends Employee {
 		} 
 		doctors.get(doctorIndex).setGrade(doctorPromotion);
 	}
-	public void showInformation(List<Ward> wardList) { 
-		Ward.toString(wardList); 
+	public static void showInformation(List<Ward> wardList, List<Team> teams) { 
+		System.out.println("\nList of Teams:\n\n"+teams.toString());
+		System.out.println("\nList of Wards and Patients:\n\n"+wardList.toString());
 		
 	}
 

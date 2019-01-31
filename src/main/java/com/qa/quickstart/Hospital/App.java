@@ -27,7 +27,8 @@ public class App
     	//Nurse.lookUpTreatment(newPatient);
     	//Doctor.addTreatment(newPatient);
     	//Nurse.lookUpTreatment(newPatient);
-    	System.out.println(teams.toString());
+    	//System.out.println("List Of Teams: "+teams.toString());
     	//Team.toString(teams);
+    	Admin.showInformation(mainWards, teams);
     }
 }
