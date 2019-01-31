@@ -54,9 +54,21 @@ public class Hospital {
 	public static List<Team> createTeams() {
 		List<Team> teams = new ArrayList<>();
 		List<Doctor> doctors = new ArrayList<>(20);
-		for (int i = 0; i < 14; i++) {
-			teams.add(new Team(i, new ArrayList<>(doctors)));
+
+		List<Doctor> consultants = new ArrayList<>(doctors.size()); 
+		for (int j = 0; j < doctors.size(); j++ ) { 
+			if(doctors.get(j).getGrade()>=3) { 
+				consultants.add(doctors.get(j));
+			}
+		} 
+		for (int k =0 ; 0 < consultants.size(); k++) { 
+			List<Doctor> tempDoctors = new ArrayList<>();
+			teams.add(new Team(k, new ArrayList<>(doctors))); 
+			tempDoctors =(teams.get(k)).getDoctors();
+			tempDoctors.add(consultants.get(k));
 		}
+	
+		
 		return teams;
 
 	}
