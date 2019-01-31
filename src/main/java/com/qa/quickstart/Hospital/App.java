@@ -15,14 +15,19 @@ public class App
 		patient.setNIN("PB969162");
     	//Patient james =new Patient("A-","1997/05/11","James Ingram","PB969162");
     	List<Ward> mainWards =Hospital.createHospital();
+    	List<Team> teams = Hospital.createTeams();
     	Patient newPatient = Admin.admitPatient();
     	Hospital.sortToWard(newPatient, mainWards);
     	Hospital.sortToWard(patient, mainWards);
+    	
+    	Doctor grey = new Doctor("General Surgery", 2, true, "1978/08/13", "Meredith Grey", "PJ13424N");
+    	
+    	Hospital.assignDoctorToTeam(0, grey, teams);
     	//System.out.println(newPatient);
     	//Nurse.lookUpTreatment(newPatient);
     	//Doctor.addTreatment(newPatient);
     	//Nurse.lookUpTreatment(newPatient);
-    	
-    	Ward.toString(mainWards);
+    	System.out.println(teams.toString());
+    	//Team.toString(teams);
     }
 }

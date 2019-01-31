@@ -19,6 +19,11 @@ public class Doctor extends MedicalStaff {
 		String doctorString = doctorScanner.nextLine();	
 		patient.setTreatment(doctorString);
 	}
+	@Override
+	public String toString()
+	{
+		return "Grade: "+this.getGrade()+"\nSpeciality: \t" +this.getSpeciality()+"\nConsultant: \t" +this.isConsultant() + "\nDate Of Birth: \t"+this.getDOB() + "\nName: \t\t"+this.getName() + "\nNIN: \t\t"+ this.getNIN();
+	}
 
 	public boolean isConsultant() {
 		return isConsultant;

@@ -16,19 +16,8 @@ public class Ward {
 	}
 	
 	
-	public static void toString(List<Ward> wardList) {
-		List<Patient> patients = new ArrayList<Patient>();
-		for(int i = 0;i<wardList.size();i++)
-		{
-			System.out.println("\nWard " +i + " contains: ");
-			patients = (wardList.get(i)).getPatientsInWard();
-			System.out.println(wardList.get(i).getWardReference());
-			for(int j = 0; j<patients.size();j++)
-			{
-				System.out.println(patients.get(j).toString());
-
-			}
-		}
+	public  String toString() {
+		return patientsInWard.toString()+"\n";
 	}
 	
 	public int getWardReference() {
