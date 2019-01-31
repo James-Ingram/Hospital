@@ -2,6 +2,7 @@ package com.qa.quickstart.Persons;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 public class Admin extends Employee {
 
@@ -13,12 +14,19 @@ public class Admin extends Employee {
 	}
 	
 	public static Patient admitPatient()
-	{
+	{ 
 		Patient patient = new Patient("","","","");
-		patient.setBloodType("A-");
-		patient.setDOB("1997/05/11");
-		patient.setName("James Ingram");
-		patient.setNIN("PB969162");
+		Scanner apScanner = new Scanner(System.in);
+		String bloodTypeString = apScanner.nextLine();	 
+		String DOBString = apScanner.nextLine(); 
+		String nameString = apScanner.nextLine();
+		String NINString = apScanner.nextLine();
+		patient.setBloodType(bloodTypeString); 
+		patient.setDOB(DOBString);  
+		patient.setName(nameString);  
+		patient.setNIN(NINString); 
+		
+		
 		return patient;
 	}
 	public String getTitle() {
