@@ -11,6 +11,18 @@ public class Hospital {
 		this.setNoOfTeams(noOfTeams);
 		this.setNoOfWards(noOfWards);
 	}
+<<<<<<< HEAD
+	public List<Patient> sortToWard(Patient newPatient, List<Patient> patients, List<Ward> wardList)
+	{
+		
+		
+		
+		patients.add(newPatient); 
+//		return wardList;
+		
+		
+		return patients;
+=======
 	
 	public static List<Ward> createHospital(){
 		List<Ward> wardList = new ArrayList<Ward>();
@@ -20,6 +32,7 @@ public class Hospital {
 			wardList.add(new Ward(i, patients));
 		}
 		return wardList;
+>>>>>>> efd29e855b45d58d1be9fedb0e2c489a662309a0
 	}
 	public static List<Patient> sortToWard(Patient newPatient)
 	{
