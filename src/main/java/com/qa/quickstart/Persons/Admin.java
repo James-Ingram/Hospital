@@ -1,6 +1,7 @@
 package com.qa.quickstart.Persons;
 
 import java.util.Date;
+import java.util.List;
 
 public class Admin extends Employee {
 
@@ -9,6 +10,16 @@ public class Admin extends Employee {
 		super(name, DOB, NIN);
 		this.title = title;
 		this.accessLevel= accessLevel;
+	}
+	
+	public static Patient admitPatient()
+	{
+		Patient patient = new Patient("","","","");
+		patient.setBloodType("A-");
+		patient.setDOB("1997/05/11");
+		patient.setName("James Ingram");
+		patient.setNIN("PB969162");
+		return patient;
 	}
 	public String getTitle() {
 		return title;

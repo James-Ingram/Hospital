@@ -7,5 +7,6 @@ public class Nurse extends MedicalStaff {
 	public Nurse(String name, String DOB, String NIN, String speciality, int grade) {
 		super(name, DOB, NIN, speciality, grade );
 		}
+	
 
 }
