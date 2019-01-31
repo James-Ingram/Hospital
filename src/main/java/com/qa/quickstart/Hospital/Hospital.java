@@ -5,11 +5,13 @@ import com.qa.quickstart.Persons.*;
 
 public class Hospital {
 	
+	
 	private int noOfWards,noOfTeams;
 	public Hospital(int noOfTeams, int noOfWards) {
 		this.setNoOfTeams(noOfTeams);
 		this.setNoOfWards(noOfWards);
 	}
+<<<<<<< HEAD
 	public List<Patient> sortToWard(Patient newPatient, List<Patient> patients, List<Ward> wardList)
 	{
 		
@@ -20,7 +22,19 @@ public class Hospital {
 		
 		
 		return patients;
+=======
+	
+	public static List<Ward> createHospital(){
+		List<Ward> wardList = new ArrayList<Ward>();
+		List<Patient> patients = new ArrayList<Patient>(20);
+		for(int i = 0; i<14;i++)
+		{
+			wardList.add(new Ward(i, patients));
+		}
+		return wardList;
+>>>>>>> efd29e855b45d58d1be9fedb0e2c489a662309a0
 	}
+
 	public int getNoOfTeams() {
 		return noOfTeams;
 	}
