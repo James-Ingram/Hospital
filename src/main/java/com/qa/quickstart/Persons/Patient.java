@@ -11,10 +11,10 @@ public class Patient extends Stakeholder {
 		super(name, DOB, NIN);
 		this.bloodType = bloodType;
 	}
-
-	public static String toString(Patient patient)
+	@Override
+	public String toString()
 	{
-		return "Blood Type: \t" +patient.getBloodType() + "\nDate Of Birth: \t"+patient.getDOB() + "\nName: \t\t"+patient.getName() + "\nNIN: \t\t"+ patient.getNIN();
+		return "Blood Type: \t" +this.getBloodType() + "\nDate Of Birth: \t"+this.getDOB() + "\nName: \t\t"+this.getName() + "\nNIN: \t\t"+ this.getNIN();
 	}
 	public int getPatientID() {
 		return patientID;

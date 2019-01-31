@@ -11,7 +11,7 @@ public class Nurse extends MedicalStaff {
 	
 	public static void lookUpTreatment(Patient patient)
 	{
-		System.out.println(patient.getTreatment());
+		System.out.println("Treatment: " + patient.getTreatment());
 	}
 
 

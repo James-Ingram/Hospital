@@ -8,11 +8,29 @@ import com.qa.quickstart.Persons.Patient;
 public class Ward {
 
 	private int wardReference =0;
-	private List<Patient> patients = new ArrayList<Patient>();
+	private List<Patient> patientsInWard = new ArrayList<Patient>();
+	
 	public Ward(int wardReference, List<Patient> patients) {
-		this.setPatients(patients);
+		this.patientsInWard= patients;
 		this.wardReference=wardReference;
 	}
+	
+	
+	public static void toString(List<Ward> wardList) {
+		List<Patient> patients = new ArrayList<Patient>();
+		for(int i = 0;i<wardList.size();i++)
+		{
+			System.out.println("\nWard " +i + " contains: ");
+			patients = (wardList.get(i)).getPatientsInWard();
+			System.out.println(wardList.get(i).getWardReference());
+			for(int j = 0; j<patients.size();j++)
+			{
+				System.out.println(patients.get(j).toString());
+
+			}
+		}
+	}
+	
 	public int getWardReference() {
 		return wardReference;
 	}
@@ -20,11 +38,11 @@ public class Ward {
 		this.wardReference = wardReference;
 	}
 	
-	public List<Patient> getPatients() {
-		return patients;
+	public List<Patient> getPatientsInWard() {
+		return patientsInWard;
 	}
-	public void setPatients(List<Patient> patients) {
-		this.patients = patients;
+	public void setPatientsInWard(List<Patient> patients) {
+		this.patientsInWard = patients;
 	}
 
 
