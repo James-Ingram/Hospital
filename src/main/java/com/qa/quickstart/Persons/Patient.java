@@ -1,4 +1,4 @@
-package com.qa.quickstart.Hospital;
+package com.qa.quickstart.Persons;
 
 import java.util.Date;
 
