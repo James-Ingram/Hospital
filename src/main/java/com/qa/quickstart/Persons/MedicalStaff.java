@@ -2,7 +2,7 @@ package com.qa.quickstart.Persons;
 
 import java.util.Date;
 
-public class MedicalStaff extends Employee {
+public abstract class MedicalStaff extends Employee {
 	private String speciality;
 	private int grade;
 	public MedicalStaff(String name, Date DOB, String NIN, String speciality, int grade) {

@@ -3,6 +3,7 @@ package com.qa.quickstart.Persons;
 import java.util.Date;
 
 public abstract class Stakeholder {
+	public int id=1;
 	private String name;
 	private Date DOB;
 	private String NIN;
@@ -12,6 +13,10 @@ public abstract class Stakeholder {
 		this.DOB = DOB;
 		this.NIN = NIN;
 
+	}
+	public int generateID() {
+		id+=1;
+		return Integer.parseInt("1"+id);
 	}
 
 	public String getName() {
