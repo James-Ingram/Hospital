@@ -2,12 +2,13 @@ package com.qa.quickstart.Hospital;
 
 import java.util.Date;
 
-public class Patient extends Stakeholder{
+public class Patient extends Stakeholder {
 	private int patientID;
 	private String doctor, ailment, pastTreatments, bloodType;
-	
-	public Patient(String NIN, String bloodType) {
-		super.NIN = NIN;
+
+	public Patient(String bloodType, Date DOB, String name, String NIN) {
+
+		super(name, DOB, NIN);
 		this.bloodType = bloodType;
 	}
 
@@ -50,13 +51,4 @@ public class Patient extends Stakeholder{
 	public void setBloodType(String bloodType) {
 		this.bloodType = bloodType;
 	}
-
-	public String getNIN() {
-		return NIN;
-	}
-
-	public void setNIN(String nIN) {
-		NIN = nIN;
-	}
-
 }
