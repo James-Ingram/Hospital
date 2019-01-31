@@ -12,6 +12,10 @@ public class Patient extends Stakeholder {
 		this.bloodType = bloodType;
 	}
 
+	public static String toString(Patient patient)
+	{
+		return "Blood Type: \t" +patient.getBloodType() + "\nDate Of Birth: \t"+patient.getDOB() + "\nName: \t\t"+patient.getName() + "\nNIN: \t\t"+ patient.getNIN();
+	}
 	public int getPatientID() {
 		return patientID;
 	}
