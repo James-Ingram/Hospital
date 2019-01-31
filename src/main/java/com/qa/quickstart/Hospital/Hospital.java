@@ -21,11 +21,7 @@ public class Hospital {
 		}
 		return wardList;
 	}
-	public static List<Patient> sortToWard(Patient newPatient)
-	{
-		List<Patient> ward= new ArrayList<Patient>();
-		return ward;
-	}
+
 	public int getNoOfTeams() {
 		return noOfTeams;
 	}
