@@ -5,7 +5,7 @@ import java.util.Date;
 public abstract class MedicalStaff extends Employee {
 	private String speciality;
 	private int grade;
-	public MedicalStaff(String name, Date DOB, String NIN, String speciality, int grade) {
+	public MedicalStaff(String name, String DOB, String NIN, String speciality, int grade) {
 		super(name, DOB, NIN);
 		this.grade = grade;
 		this.speciality = speciality;

@@ -4,7 +4,7 @@ import java.util.Date;
 
 public abstract class Employee extends Stakeholder {
 
-	public Employee(String name, Date DOB, String NIN) {
+	public Employee(String name, String DOB, String NIN) {
 		super(name, DOB, NIN);
 	}
 	@Override

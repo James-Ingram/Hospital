@@ -7,7 +7,7 @@ public class Doctor extends MedicalStaff {
 	
 	private boolean isConsultant;
 
-	public Doctor(String speciality, int grade, boolean isConsultant, Date DOB, String name, String NIN) {
+	public Doctor(String speciality, int grade, boolean isConsultant, String DOB, String name, String NIN) {
 		super(name, DOB, NIN, speciality, grade );
 		this.isConsultant = isConsultant;
 	}

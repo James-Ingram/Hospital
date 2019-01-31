@@ -1,14 +1,14 @@
 package com.qa.quickstart.Persons;
 
-import java.util.Date;
+//import java.util.Date;
 
 public abstract class Stakeholder {
 	public int id=1;
 	private String name;
-	private Date DOB;
+	private String DOB;
 	private String NIN;
 
-	public Stakeholder(String name, Date DOB, String NIN) {
+	public Stakeholder(String name, String DOB, String NIN) {
 		this.name = name;
 		this.DOB = DOB;
 		this.NIN = NIN;
@@ -27,11 +27,11 @@ public abstract class Stakeholder {
 		this.name = name;
 	}
 
-	public Date getDOB() {
+	public String getDOB() {
 		return DOB;
 	}
 
-	public void setDOB(Date dOB) {
+	public void setDOB(String dOB) {
 		DOB = dOB;
 	}
 

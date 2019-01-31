@@ -6,7 +6,7 @@ public class Patient extends Stakeholder {
 	private int patientID;
 	private String doctor, ailment, pastTreatments, bloodType;
 
-	public Patient(String bloodType, Date DOB, String name, String NIN) {
+	public Patient(String bloodType, String DOB, String name, String NIN) {
 
 		super(name, DOB, NIN);
 		this.bloodType = bloodType;

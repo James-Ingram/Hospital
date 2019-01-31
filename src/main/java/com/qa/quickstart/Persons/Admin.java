@@ -5,7 +5,7 @@ import java.util.Date;
 public class Admin extends Employee {
 
 	private String title, accessLevel;
-	public Admin(String name, Date DOB, String NIN, String accessLevel, String title) {
+	public Admin(String name, String DOB, String NIN, String accessLevel, String title) {
 		super(name, DOB, NIN);
 		this.title = title;
 		this.accessLevel= accessLevel;
