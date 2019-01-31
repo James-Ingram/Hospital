@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Patient extends Stakeholder {
 	private int patientID;
-	private String doctor, ailment, pastTreatments, bloodType;
+	private String doctor, ailment, pastTreatments, bloodType, treatment = "None";
 
 	public Patient(String bloodType, String DOB, String name, String NIN) {
 
@@ -54,5 +54,13 @@ public class Patient extends Stakeholder {
 
 	public void setBloodType(String bloodType) {
 		this.bloodType = bloodType;
+	}
+
+	public String getTreatment() {
+		return treatment;
+	}
+
+	public void setTreatment(String treatment) {
+		this.treatment = treatment;
 	}
 }
